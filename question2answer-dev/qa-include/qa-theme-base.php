@@ -396,8 +396,7 @@ class qa_html_theme_base
 
 	public function body_hidden()
 	{
-		$indent = $this->isRTL ? '9999px' : '-9999px';
-		$this->output('<div style="position:absolute; left:' . $indent . '; top:-9999px;">');
+		$this->output('<div style="position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:0;width:0;margin:0;padding:0;border:0;">');
 		$this->waiting_template();
 		$this->output('</div>');
 	}
@@ -2196,7 +2195,7 @@ class qa_html_theme_base
 	{
 		$content = isset($q_view['content']) ? $q_view['content'] : '';
 
-		$this->output('<div class="qa-q-view-content">');
+		$this->output('<div class="qa-q-view-content qa-post-content">');
 		$this->output_raw($content);
 		$this->output('</div>');
 	}
@@ -2359,7 +2358,7 @@ class qa_html_theme_base
 			$a_item['content'] = '';
 		}
 
-		$this->output('<div class="qa-a-item-content">');
+		$this->output('<div class="qa-a-item-content qa-post-content">');
 		$this->output_raw($a_item['content']);
 		$this->output('</div>');
 	}
@@ -2465,7 +2464,7 @@ class qa_html_theme_base
 			$c_item['content'] = '';
 		}
 
-		$this->output('<div class="qa-c-item-content">');
+		$this->output('<div class="qa-c-item-content qa-post-content">');
 		$this->output_raw($c_item['content']);
 		$this->output('</div>');
 	}

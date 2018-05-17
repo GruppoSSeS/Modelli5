@@ -15,7 +15,7 @@
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
-
+	
 	More about this license: http://www.question2answer.org/license.php
 */
 
@@ -23,6 +23,7 @@ function qa_reveal(elem, type, callback)
 {
 	if (elem)
 		$(elem).slideDown(400, callback);
+
 }
 
 function qa_conceal(elem, type, callback)
@@ -92,7 +93,7 @@ function qa_vote_click(elem)
 				var mess = document.getElementById('errorbox');
 
 				if (!mess) {
-					var mess = document.createElement('div');
+					mess = document.createElement('div');
 					mess.id = 'errorbox';
 					mess.className = 'qa-error';
 					mess.innerHTML = lines[1];

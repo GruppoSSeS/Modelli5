@@ -5,7 +5,7 @@ require_once QA_INCLUDE_DIR.'app/options.php';
 class AppFormatTest extends PHPUnit_Framework_TestCase
 {
 	/**
-	 * Test basic number formatting (no compact numbers) ehi
+	 * Test basic number formatting (no compact numbers)
 	 */
 	public function test__qa_format_number()
 	{
